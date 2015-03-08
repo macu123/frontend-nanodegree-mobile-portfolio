@@ -9,8 +9,25 @@
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
-
-    <link href="css/style.css" rel="stylesheet">
+    <style>
+      html{ font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+      body{ margin: 0px; font-size: 14px; line-height: 1.61; font-weight: 400; }
+      body{ font-family: 'Open Sans', sans-serif; color: rgb(51, 51, 51); }
+      a{ color: rgb(17, 34, 204); }
+      strong{ font-weight: bold; }
+      img{ border: 0px; max-width: 100%; }
+      body{ background: rgb(255, 255, 255); }
+      header, .container{ max-width: 45em; margin: 0px auto; }
+      header{ padding: 0px 0.5em; color: rgb(201, 11, 11); }
+      header img{ border-radius: 40px; float: left; }
+      header p{ font-size: 1.5em; font-weight: bold; padding-left: 4em; }
+      header p span{ font-size: 0.8em; font-weight: normal; }
+      .hero{ padding: 2em; font-size: 1.2em; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(248, 248, 248); }
+      @media only screen and (max-width: 480px){
+        body{ font-size: 12px; }
+        header p{ padding-left: 4.5em; }
+      }
+    </style>
     <link href="css/print.css" rel="stylesheet" media="print">
 
     <script>
@@ -51,5 +68,29 @@
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
+    <script>
+      function loadCSS(href){
+        var ss = window.document.createElement('link'),
+            ref = window.document.getElementsByTagName('head')[0];
+
+        ss.rel = 'stylesheet';
+        ss.href = href;
+
+        // temporarily, set media to something non-matching to ensure it'll
+        // fetch without blocking render
+        ss.media = 'only x';
+
+        ref.parentNode.insertBefore(ss, ref);
+
+        setTimeout( function(){
+          // set media back to `all` so that the stylesheet applies once it loads
+          ss.media = 'all';
+        },0);
+      }
+      loadCSS('css/style.css');
+    </script>
+    <noscript>
+      <link href="css/style.css" rel="stylesheet">
+    </noscript>
   </body>
 </html>
