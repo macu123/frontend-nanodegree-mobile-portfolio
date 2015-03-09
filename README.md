@@ -2,8 +2,8 @@ Website Performance Optimization portfolio project<br>
 <br>
 How to run this project?<br>
 <br>
-1. Open ... using any major browser.<br>
-2. Visit <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> using any browser.<br>
+1. Open http://macu123.github.io/frontend-nanodegree-mobile-portfolio/ using any major browser.<br>
+2. Visit <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> using any major browser.<br>
 3. Copy the url of the project into the blank to get the score of index.html.<br>
 4. Then it should get higher than 90 for both Mobile and Desktop.<br>
 5. Navigate to Pizza.html and open the console of the browser.<br>
