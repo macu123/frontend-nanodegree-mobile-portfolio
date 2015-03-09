@@ -10,6 +10,8 @@ How to run this project?<br>
 6. When you scroll in the page, it will output frame per second (FPS). The FPS should be consistently higher than 60fps.<br>
 7. When use slider to change the size of pizzas, it will output the time to resize of pizzas. It should be below 5ms.<br>
 <br>
+Bonus: Although project-mobile.html, project-webperf.html and project-2048.html are not required, I still optimize them to achieve pagespeed scores higher than 90 for both Mobile and Desktop. :)<br>
+<br>
 What steps did I take to optimize the website?<br>
 <br>
 1. Copy required font css from Google Font API into style.css, and delete google font css file to remove render-blocking css.<br>
