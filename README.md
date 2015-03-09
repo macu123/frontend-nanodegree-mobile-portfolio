@@ -3,7 +3,7 @@ Website Performance Optimization portfolio project<br>
 How to run this project?<br>
 <br>
 1. Open ... using any major browser.<br>
-2. Visit <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> using any broweser.<br>
+2. Visit <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> using any browser.<br>
 3. Copy the url of the project into the blank to get the score of index.html.<br>
 4. Then it should get higher than 90 for both Mobile and Desktop.<br>
 5. Navigate to Pizza.html and open the console of the browser.<br>
@@ -19,5 +19,5 @@ What steps did I take to optimize the website?<br>
 5. Add async attributes to all js files that have nothing to do with page rendering to remove render-blocking javascript.<br>
 6. Compress and resize the size of images to speedup rendering.<br>
 7. Change all querySelector to getElementById and querySelectorAll to getElementsByClassName to speedup FPS.<br>
-8. Use jQuery batch DOM update instead of individual DOM update.<br>
-9. Reduce total number of pizzas rendering from 100 to 22.
+8. Use jQuery batch DOM update instead of individual DOM update to speed up time to resize pizzas.<br>
+9. Reduce total number of pizzas rendering from 100 to 22 to speed up FPS.
