@@ -459,9 +459,13 @@ var resizePizzas = function(size) {
     //use jQuery to perform batch update on DOM instead of update each individual DOM
     var randomPizzaContainer = $(".randomPizzaContainer");
     var dx = determineDx(randomPizzaContainer[0], size);
-    var newwidth = randomPizzaContainer.prop("offsetWidth") + dx + 'px';
-    randomPizzaContainer.css("width", newwidth);
-    
+    //add new variables to store old width and proportion
+    var oldwidth = randomPizzaContainer.prop("offsetWidth");
+    var proportion = (oldwidth + dx)/oldwidth;
+    //use transform to speedup
+    randomPizzaContainer.css(
+      "transform", "scale(" + proportion + ", " + proportion + ")"
+      );
   }
 
   changePizzaSizes(size);
@@ -508,10 +512,12 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
+  //Move unchanged variable out of loop
+  var unchanged = document.body.scrollTop / 1250
   //change querySelectorAll to getElementsByClassName
   var items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin(unchanged + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -533,8 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   
-  //change total number of pizzas rendered in the background from 200 to 22
-  for (var i = 0; i < 22; i++) {
+  for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
