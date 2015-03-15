@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/macu123/frontend-nanodegree-mobile-portfolio",
   "devDependencies": {
+    "critical": "^0.5.5",
     "event-stream": "^3.3.0",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
