@@ -22,4 +22,5 @@ What steps did I take to optimize the website?<br>
 6. Compress and resize the size of images to speedup rendering.<br>
 7. Change all querySelector to getElementById and querySelectorAll to getElementsByClassName to speedup FPS.<br>
 8. Use jQuery batch DOM update instead of individual DOM update to speed up time to resize pizzas.<br>
-9. Reduce total number of pizzas rendering from 100 to 22 to speed up FPS.
+9. Move variables that don't need to be computed or evaluated inside the loop outside the loop.<br>
+10. Change implementation of resizing pizzas to CSS transform to improve website performance.
