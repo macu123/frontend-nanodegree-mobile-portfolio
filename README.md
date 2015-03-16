@@ -3,14 +3,14 @@ Website Performance Optimization portfolio project<br>
 How to run this project?<br>
 <br>
 1. Open http://macu123.github.io/frontend-nanodegree-mobile-portfolio/ using any major browser.<br>
-2. Visit <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a> using any major browser.<br>
+2. Then open another tab for <a href="https://developers.google.com/speed/pagespeed/insights">Google PageSpeed Insights</a>.<br>
 3. Copy the url of the project into the blank to get the score of index.html.<br>
 4. Then it should get higher than 90 for both Mobile and Desktop.<br>
 5. Navigate to Pizza.html and open the console of the browser.<br>
 6. When you scroll in the page, it will output frame per second (FPS). The FPS should be consistently higher than 60fps.<br>
 7. When use slider to change the size of pizzas, it will output the time to resize of pizzas. It should be below 5ms.<br>
 <br>
-Bonus: Although project-mobile.html, project-webperf.html and project-2048.html are not required, I still optimize them to achieve pagespeed scores higher than 90 for both Mobile and Desktop. :)<br>
+Bonus: Although project-mobile.html, project-webperf.html and project-2048.html were not required, I still optimized them to achieve pagespeed scores higher than 90 for both Mobile and Desktop. :)<br>
 <br>
 What steps did I take to optimize the website?<br>
 <br>
